@@ -6,23 +6,64 @@
     android:orientation="horizontal"
     android:padding="8dp">
 
-    <TextView
-        android:id="@+id/text_view_title"
+    <!-- Borítókép -->
+    <ImageView
+        android:id="@+id/image_view_cover"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="8dp" />
+
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Movie Title"
-        android:textSize="18sp"/>
+        android:orientation="vertical">
 
+        <!-- Film címe -->
+        <TextView
+            android:id="@+id/text_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Title"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Műfaj -->
+        <TextView
+            android:id="@+id/text_view_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Genre: Action"
+            android:textSize="14sp" />
+
+        <!-- Hossz -->
+        <TextView
+            android:id="@+id/text_view_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Length: 120 min"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Megnézve checkbox -->
     <CheckBox
         android:id="@+id/checkbox_watched"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
+    <!-- Szerkesztés gomb -->
     <Button
         android:id="@+id/button_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edit"/>
+        android:text="Edit" />
+    <!-- Törlés gomb -->
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Törlés" />
 </LinearLayout>
+
 

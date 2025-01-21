@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Film címe -->
+        <EditText
+            android:id="@+id/edit_text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title" />
+
+        <!-- Film hossza -->
+        <EditText
+            android:id="@+id/edit_text_length"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Length (minutes)"
+            android:inputType="number" />
+
+        <!-- Műfaj -->
+        <EditText
+            android:id="@+id/edit_text_genre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Genre" />
+
+        <!-- Borítókép -->
+        <Button
+            android:id="@+id/button_choose_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose Cover Image" />
+    </LinearLayout>
+</ScrollView>
