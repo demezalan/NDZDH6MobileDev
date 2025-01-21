@@ -1,69 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="8dp">
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="#212d76"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
 
-    <!-- Borítókép -->
-    <ImageView
-        android:id="@+id/image_view_cover"
-        android:layout_width="80dp"
-        android:layout_height="120dp"
-        android:scaleType="centerCrop"
-        android:layout_marginEnd="8dp" />
-
-    <LinearLayout
-        android:layout_width="0dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:padding="20dp">
+
+        <!-- Borítókép -->
+        <ImageView
+            android:id="@+id/image_view_cover"
+            android:layout_width="147dp"
+            android:layout_height="192dp"
+            android:layout_marginEnd="76dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <!-- Film címe -->
         <TextView
             android:id="@+id/text_view_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Movie Title"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_width="0dp"
+            android:layout_height="115dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="bottom|start"
+            android:text="Film címe"
+            android:textColor="#ffffff"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image_view_cover"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <!-- Műfaj -->
         <TextView
             android:id="@+id/text_view_genre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Genre: Action"
-            android:textSize="14sp" />
+            android:layout_width="108dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="top|end"
+            android:text="Akció"
+            android:textColor="#cfcfcf"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/image_view_cover"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_length" />
 
         <!-- Hossz -->
         <TextView
             android:id="@+id/text_view_length"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Length: 120 min"
-            android:textSize="14sp" />
-    </LinearLayout>
+            android:layout_width="108dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="top|end"
+            android:text="120 perc"
+            android:textColor="#cfcfcf"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/image_view_cover"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Megnézve checkbox -->
-    <CheckBox
-        android:id="@+id/checkbox_watched"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <!-- Megnézve checkbox -->
+        <CheckBox
+            android:id="@+id/checkbox_watched"
+            android:layout_width="39dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="4dp"
+            app:buttonTint="#64C568"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/image_view_cover" />
 
-    <!-- Szerkesztés gomb -->
-    <Button
-        android:id="@+id/button_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edit" />
-    <!-- Törlés gomb -->
-    <Button
-        android:id="@+id/deleteButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Törlés" />
-</LinearLayout>
+        <!-- Szerkesztés gomb -->
+        <Button
+            android:id="@+id/button_edit"
+            android:layout_width="49dp"
+            android:layout_height="51dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="12dp"
+            android:textColor="#000000"
+            android:text="✎"
+            app:backgroundTint="#CDC46D"
+            app:layout_constraintBottom_toTopOf="@+id/deleteButton"
+            app:layout_constraintEnd_toEndOf="parent" />
 
+        <!-- Törlés gomb -->
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="49dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="44dp"
+            android:text="🗑"
+            app:backgroundTint="#BC2121"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

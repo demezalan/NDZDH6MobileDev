@@ -29,7 +29,7 @@ class MovieAdapter(
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
         val movie = movies[position]
         holder.titleTextView.text = movie.title
-        holder.lengthTextView.text = "${movie.length} min"
+        holder.lengthTextView.text = "${movie.length} perc"
         holder.genreTextView.text = movie.genre
 
         // Glide segítségével kép/alapértelmezett kép betöltése

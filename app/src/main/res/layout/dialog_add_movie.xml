@@ -15,14 +15,14 @@
             android:id="@+id/edit_text_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Title" />
+            android:hint="Cím" />
 
         <!-- Film hossza -->
         <EditText
             android:id="@+id/edit_text_length"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Length (minutes)"
+            android:hint="Hossz (percben)"
             android:inputType="number" />
 
         <!-- Műfaj -->
@@ -30,13 +30,13 @@
             android:id="@+id/edit_text_genre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Genre" />
+            android:hint="Műfaj" />
 
         <!-- Borítókép -->
         <Button
             android:id="@+id/button_choose_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Choose Cover Image" />
+            android:text="Borítókép kiválasztása" />
     </LinearLayout>
 </ScrollView>
